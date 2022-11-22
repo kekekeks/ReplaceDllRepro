@@ -1,0 +1,13 @@
+<Project>
+    <Target Name="XpfRemoveConflicts" AfterTargets="ResolveTargetingPackAssets">
+        <ItemGroup>
+            <ReferencesToRemove
+                    Include="@(Reference)"
+                    Condition="'%(Filename)' == 'Microsoft.Win32.Primitives'"
+            />
+        </ItemGroup>
+        <ItemGroup>
+            <Reference Remove="@(ReferencesToRemove)" />
+        </ItemGroup>
+    </Target>
+</Project>

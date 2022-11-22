@@ -1,0 +1,1 @@
+﻿WindowsBase.MySuperDuperClass.Foo();
